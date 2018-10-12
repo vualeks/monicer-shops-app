@@ -10,6 +10,7 @@ import me.hackathon.monicershopsapp.network.TokenHeaderInterceptor
 import me.hackathon.monicershopsapp.util.Constants.BASE_URL
 import okhttp3.Cache
 import okhttp3.OkHttpClient
+import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.converter.scalars.ScalarsConverterFactory
@@ -56,7 +57,11 @@ class NetworkModule {
         sslContext.init(null, arrayOf(allowAllTrustManagers), SecureRandom())
         val sslSocketFactory = sslContext.socketFactory
 
+        val logging = HttpLoggingInterceptor()
+        logging.level = HttpLoggingInterceptor.Level.BODY
+
         return OkHttpClient.Builder()
+                .addInterceptor(logging)
                 .addInterceptor(authenticationInterceptor)
                 .readTimeout(60, TimeUnit.SECONDS)
                 .writeTimeout(60, TimeUnit.SECONDS)

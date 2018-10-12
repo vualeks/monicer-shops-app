@@ -3,6 +3,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="me.hackathon.monicershopsapp">
 
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+
     <application
         android:name=".App"
         android:allowBackup="true"
@@ -14,12 +20,17 @@
         tools:ignore="AllowBackup,GoogleAppIndexingWarning">
         <activity android:name=".ui.splash.SplashActivity">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".ui.login.LoginActivity" />
-        <activity android:name=".ui.main.MainActivity" />
+        <activity android:name=".ui.login.LoginActivity"/>
+        <activity android:name=".ui.main.MainActivity"/>
+        <activity android:name=".ui.newbill.NewBillActivity">
+        </activity>
+      <activity android:name=".ui.scanUtil.ScanActivity"/>
+        <activity android:name=".ui.summary.PaySummaryActivity"/>
     </application>
 
 </manifest>

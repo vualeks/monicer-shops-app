@@ -1,2 +1,15 @@
 <resources>
+  <string name="login">Login</string>
+  <string name="new_bill">New Bill</string>
+  <string name="logo_text">Logo</string>
+  <string name="new_bill_card_description">Enter total price from the bill</string>
+  <string name="new_bill_amount">Bill amount</string>
+  <string name="confirm">Confirm</string>
+  <string name="cancel">Cancel</string>
+  <string name="scan_qr_code">Scan QR Code</string>
+  <string name="error">Error</string>
+  <string name="allow_camera_error">Please allow access to camera device</string>
+  <string name="close">Close</string>
+  <string name="waiting">Waiting for customer to confirm transaction</string>
+  <string name="payment_successful">Payment successful!</string>
 </resources>

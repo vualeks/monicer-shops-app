@@ -7,6 +7,7 @@ import dagger.Module
 import dagger.multibindings.IntoMap
 import me.hackathon.monicershopsapp.ui.login.LoginViewModel
 import me.hackathon.monicershopsapp.ui.main.MainViewModel
+import me.hackathon.monicershopsapp.ui.newbill.NewBillViewModel
 import kotlin.reflect.KClass
 
 @MapKey
@@ -24,4 +25,9 @@ abstract class ViewModelModule {
     @IntoMap
     @ViewModelKey(MainViewModel::class)
     abstract fun bindMainViewModel(mainViewModel: MainViewModel): ViewModel
+
+    @Binds
+    @IntoMap
+    @ViewModelKey(NewBillViewModel::class)
+    abstract fun bindNewBillViewModel(viewModel: NewBillViewModel): ViewModel
 }
